@@ -46,7 +46,7 @@ end
 begin 
   CSV.foreach(options[:input], :headers => true, :col_sep => options[:separator]) do |row|
     raise WrongNumberColumns if row.size != 2
-    digest = Digest::MD5.hexdigest(row[1])
+    digest = Digest::MD5.hexdigest(row[1].upcase.strip)
     puts "#{row[0]}\t#{digest}"
   end
 rescue WrongNumberColumns
