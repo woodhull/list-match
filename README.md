@@ -1,3 +1,7 @@
+# About
+
+This script performs a one way md5 hash of input values in order to allow organizations to match their lists without revealing sensitive information. 
+
 # Setup
 
 Install Ruby 1.9.2:
@@ -20,6 +24,8 @@ will save the output to a file.
 
 `ruby match.rb`
 will print detailed usage instructions. 
+
+The output file can be safely compared to other output files generated with the same script in order to find matching records. 
 
 # Notes
 
